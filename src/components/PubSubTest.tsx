@@ -76,7 +76,7 @@ const PubSubTest = () => {
   };
 
   return (
-    <TabPage title="Publish / Subscribe">
+    <TabPage title="Publish / Subscribe (Appflow Test)">
       <IonListHeader>
         <h3 style={{ fontWeight: 700 }}>Publish</h3>
       </IonListHeader>
@@ -135,9 +135,7 @@ const PubSubTest = () => {
           <div slot="content">
             {subscriptions.map((subscription) => (
               <IonItem key={subscription.id}>
-                <IonLabel class="ion-text-wrap">
-                  {subscription.topic}
-                </IonLabel>
+                <IonLabel class="ion-text-wrap">{subscription.topic}</IonLabel>
               </IonItem>
             ))}
           </div>

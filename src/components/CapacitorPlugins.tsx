@@ -10,12 +10,10 @@ import {
   IonModal,
   IonText,
   IonTitle,
-  IonIcon
+  IonIcon,
 } from "@ionic/react";
 import { useEffect, useState } from "react";
-import {
-  chevronBack,
-} from "ionicons/icons";
+import { chevronBack } from "ionicons/icons";
 import CallMethodModal from "./CallMethodModal";
 import TabPage from "./TabPage";
 
@@ -80,10 +78,7 @@ const CapacitorPlugins = () => {
     <TabPage title="Capacitor Plugins">
       <IonAccordionGroup expand="inset">
         {plugins.map((plugin) => (
-          <IonAccordion
-            key={plugin.name}
-            disabled={Boolean(plugin.isDisabled)}
-          >
+          <IonAccordion key={plugin.name} disabled={Boolean(plugin.isDisabled)}>
             <IonItem slot="header" color="light">
               {plugin.name}
               {defaultPlugins.includes(plugin.name) && (
@@ -100,8 +95,7 @@ const CapacitorPlugins = () => {
                       key={method.name}
                       detail={true}
                       onClick={() => {
-                        setMethodName(method.name),
-                          setPluginName(plugin.name);
+                        setMethodName(method.name), setPluginName(plugin.name);
                         setShowModal(true);
                       }}
                     >
@@ -124,11 +118,8 @@ const CapacitorPlugins = () => {
             </IonButtons>
             <IonTitle>{methodName}</IonTitle>
           </IonToolbar>
-        </IonHeader >
-        <CallMethodModal
-          methodName={methodName}
-          pluginName={pluginName}
-        />
+        </IonHeader>
+        <CallMethodModal methodName={methodName} pluginName={pluginName} />
       </IonModal>
     </TabPage>
   );
