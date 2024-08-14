@@ -8,6 +8,9 @@ const InitialContext = () => {
   return (
     <TabPage title="Initial Context (Appflow Test)">
       <IonList inset={true}>
+        <IonItem>
+          <IonLabel>This is another iteration of this tab.</IonLabel>
+        </IonItem>
         <IonItem color="light">
           <IonLabel style={{ whiteSpace: "pre-wrap" }}>
             {initialContext ? (
